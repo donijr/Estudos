@@ -9,7 +9,7 @@ caneta = turtle.Turtle()
 
 def poligono_regular(n_lados, comp_lado):
     n_lados = int(360/n_lados)
-    for i in range(n_lados,360,n_lados):
+    for i in range(n_lados,361,n_lados):
         caneta.forward(comp_lado)
         caneta.setheading(i) 
 

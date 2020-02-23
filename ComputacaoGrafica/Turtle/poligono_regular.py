@@ -16,7 +16,7 @@ def poligono_regular(n_lados, comp_lado):
         caneta.setheading(angulo_total)
         angulo_total = angulo_total + angulo_parcial
 
-poligono_regular(7.5,60)
+poligono_regular(7,60)
 
  
 input()

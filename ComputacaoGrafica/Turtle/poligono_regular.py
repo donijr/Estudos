@@ -8,12 +8,18 @@ caneta = turtle.Turtle()
 
 
 def poligono_regular(n_lados, comp_lado):
-    n_lados = int(360/n_lados)
-    for i in range(n_lados,361,n_lados):
+    angulo_total = 360/n_lados
+    angulo_parcial = 360/n_lados
+    """ for i in range(n_lados,720,n_lados):
         caneta.forward(comp_lado)
-        caneta.setheading(i) 
+        caneta.setheading(i)  """
 
-poligono_regular(7,50)
+    while(angulo_total <= 361):
+        caneta.forward(comp_lado)
+        caneta.setheading(angulo_total)
+        angulo_total = angulo_total + angulo_parcial
+
+poligono_regular(7,60)
 
  
 input()

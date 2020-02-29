@@ -1,6 +1,6 @@
 #n_lados = número de lados do polígono. n_lados deve ser do tipo inteiro
 #comp_lado = comprimento do lado do polígono. comp_lado pode ser tipo inteiro ou float
-#profundidade = profundidade do polígonp. profundidade pode ser tipo inteiro ou float
+#profundidade = profundidade do polígono. profundidade pode ser tipo inteiro ou float
 #turtle = objeto do tipo turtle que vai desenhar o polígono
 
 import turtle

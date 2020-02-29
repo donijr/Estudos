@@ -9,12 +9,13 @@ caneta = turtle.Turtle()
 
 
 def poligono_regular(n_lados, comp_lado,turtle):
-    angulo_total = 360/n_lados
-    angulo_parcial = 360/n_lados
-    while(angulo_total <= 361):
+    acumulador_angulo = 360/n_lados
+    angulo_minimo = 360/n_lados
+    while(acumulador_angulo <= 361):
         turtle.forward(comp_lado)
-        turtle.setheading(angulo_total)
-        angulo_total = angulo_total + angulo_parcial
+        turtle.setheading(acumulador_angulo)
+        #acumulador_angulo = acumulador_angulo + angulo_minimo
+        acumulador_angulo += angulo_minimo
 
 poligono_regular(7,60,caneta)
 

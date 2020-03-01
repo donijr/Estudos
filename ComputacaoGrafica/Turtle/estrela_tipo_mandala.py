@@ -11,7 +11,7 @@ def estrela_tipo_mandala(n_pontas,comprimento,turtle):
     for i in range(n_pontas):
         angulo = 360 / n_pontas
         turtle.right(angulo*2)
-        turtle.forward(comp_lado)
+        turtle.forward(comprimento)
 
 caneta = turtle.Turtle()
 

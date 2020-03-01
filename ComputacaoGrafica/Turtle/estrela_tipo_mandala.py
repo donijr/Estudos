@@ -1,5 +1,5 @@
-#n_lados = número de lados do polígono. n_lados deve ser do tipo inteiro
-#comp_lado = comprimento do lado do polígono. comp_lado pode ser tipo inteiro ou float
+#n_pontas = número de pontas da estrela. n_lados deve ser do tipo inteiro
+#comp_lado = comprimento do total de uma ponta a outra da estrela. comprimento pode ser tipo inteiro ou float
 #turtle = objeto do tipo turtle que vai desenhar o polígono
 
 # !!! Restrições do algoritmo: Ainda não aperfeicoei, então para conseguir resultados satisfatórios n_lados >= 5 e sempre ímpar. 
@@ -7,9 +7,9 @@
 
 import turtle
 
-def estrela_tipo_mandala(n_lados,comp_lado,turtle):
-    for i in range(n_lados):
-        angulo = 360 / n_lados
+def estrela_tipo_mandala(n_pontas,comprimento,turtle):
+    for i in range(n_pontas):
+        angulo = 360 / n_pontas
         turtle.right(angulo*2)
         turtle.forward(comp_lado)
 

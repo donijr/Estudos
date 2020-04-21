@@ -1,0 +1,5 @@
+== &&
+*&&* -> (E) entre dois comandos faz o shell executar o comando2 se o comando1 ter exit status = 0. +
+---
+comando1 && comando2
+---

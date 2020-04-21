@@ -1,0 +1,5 @@
+== ;
+*;* -> ; entre dois comandos faz o shell fazer o comando1 depois o comando2. + 
+----
+comando1;comando2
+----

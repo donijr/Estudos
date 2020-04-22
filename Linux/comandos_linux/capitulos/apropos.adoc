@@ -1,0 +1,3 @@
+=== apropos
+
+*apropos palavraBuscada* -> Busca um comando/manual com determinada palavra-chave.

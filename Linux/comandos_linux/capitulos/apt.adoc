@@ -1,0 +1,15 @@
+=== apt
+
+*apt-cache search nomePacote* -> buscar pacote
+
+*sudo apt-get install nomePacote* -> instalar pacote
+
+*sudo apt-get install --only-upgrade nomePacote* -> atualizar somente o pacote escolhido
+
+*sudo apt-get -f install nomePacote* -> instala pacote com dependencias, corrige dependencias.
+
+*sudo apt-get remove nomePacote* -> remover pacote.
+
+*sudo apt-get update* -> atualizar lista dos repositórios.
+
+*sudo apt-get upgrade* -> atualizar sistema.

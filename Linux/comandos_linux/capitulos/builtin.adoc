@@ -1,0 +1,5 @@
+=== builtin
+
+*builtin comando* -> 
+
+//pesquisar mais sobre depois. Sobre como funciona o comando

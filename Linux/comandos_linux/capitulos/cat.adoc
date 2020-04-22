@@ -1,0 +1,23 @@
+=== cat
+
+[IMPORTANT]
+====
+.Objetivo do cat
+O objetivo do cat é servir como concatenador de arquivos.
+====
+
+*cat nomeArquivo* -> exibe conteúdo de nomeArquivo.
+
+*cat nomeArquivo1 nomeArquivo2* -> exibe e concatena nomeArquivo1 e nomeArquivo2.
+
+cat -n nomeArquino -> exibe conteúdo do nomeArquivo e exibe o número de linhas do documento.
+
+*cat -q nomeArquivo* -> exibe o conteúdo do nomeArquivo sem informações sobre o arquivo. Exibe somente o texto, não exibe o título.
+
+*cat -n 5 nomeArquivo* --> exibe o conteúdo das 5 primeiras linhas. Obs: Também pode ser utilado qualquer outro número no lugar do 5.
+
+*cat /etc/os-release* -> exibe informações sobre a versão do sistema operacional
+
+*cat /etc/lsb-release* -> exibe informações sobre a versão do sistema operacional debian-like
+
+*cat /etc/redhat-release* -> exibe informações sobre a versão do sistema operacional redhat-like.

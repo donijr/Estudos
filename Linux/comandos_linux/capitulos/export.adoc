@@ -1,0 +1,5 @@
+=== export
+
+*export nomeVariavel* -> Define atributo de exportação para variáveis shell. Transforma uma variável de shell em de variável de ambiente.
+
+*export nomeVariavel -n* -> variável deixa de ser de ambiente. Variável ainda existe, mas como variável de shell.   

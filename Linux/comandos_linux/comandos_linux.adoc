@@ -40,3 +40,28 @@ include::{capitulosdir}/cat.adoc[]
 include::{capitulosdir}/cd.adoc[]
 
 include::{capitulosdir}/cp.adoc[]
+
+include::{capitulosdir}/chmod.adoc[]
+
+== D
+
+include::{capitulosdir}/dpkg.adoc[]
+
+== E
+
+include::{capitulosdir}/echo.adoc[]
+
+include::{capitulosdir}/env.adoc[]
+
+include::{capitulosdir}/exit.adoc[]
+
+include::{capitulosdir}/export.adoc[]
+
+== F
+
+include::{capitulosdir}/find.adoc[]
+
+
+
+
+

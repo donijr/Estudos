@@ -1,0 +1,9 @@
+=== dpkg
+
+*sudo dpkg -i nomeArquivo.deb* -> instala pacote deb , não instala dependências.
+
+*sudo dpkg -r nomeArquivo.deb* -> desinstala pacote deb , não desinstala dependências.
+
+*sudo dpkg -P nomeArquivo.deb* -> remove pacotes deb e arquivos de configurações.
+
+*dpkg --list* -> lista pacotes que estão ou já estiveram no sistema.

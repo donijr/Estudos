@@ -1,0 +1,6 @@
+=== bash
+
+*bash* -> abre um bash. Pode abrir um bash dentro de outro bash. Dica: abra um bash dentro de outro bash para fazer testes. 
+
+*bash -c* -> 
+//bash -c: não entendi direito . Pesquisar mais sobre depois

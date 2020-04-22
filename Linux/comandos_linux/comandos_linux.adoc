@@ -1,6 +1,7 @@
 = Comandos Linux Sh
 :toc:
 :toclevels: 3
+:toc: left
 :toc-title: Índice
 
 :capitulosdir: ./capitulos

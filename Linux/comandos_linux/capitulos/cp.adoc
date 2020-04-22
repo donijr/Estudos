@@ -1,0 +1,20 @@
+=== cp
+
+*cp nomeArquivo nomeArquivo(copia)* -> cria uma cópia do nomeArquivo com nome excolhido, no caso seria, de nomeArquivo(copia)
+
+*cp NomeArquivo diretorio1/subdiretorio1* -> cria uma cópia de nomeArquivo chamado nomeArquivo em subdiretorio1.
+
+*cp -i nomeArquivo nomeArquivo(copia)* -> antes de copiar arquivos exibe um pergunta para confirmar a operação.
+
+//&#42; É * EM UNICODE 
+*cp diretorioOrigem/&#42; diretórioDestino* -> copia todos os arquivos de diretórioOrigem para diretórioDestino. Não copia diretórios.
+
+//&#42; É * EM UNICODE 
+*cp -u diretorioOrigem/&#42; bkpDiretórioDestino* -> copia só os arquivos que foram modificados de diretorioOrigem para bkpDiretorioDestino
+
+//&#42; É * EM UNICODE
+*cp -b diretorio1/&#42; diretorio2* -> sobresescreve os arquivos de diretorio1, mas antes cria cópias de backup. 
+
+*cp -r diretorioOrigem diretorioDestino* -> copia diretorio. Copia o conteúdo diretorioOrigem para o diretorioDestino recursivamente.
+
+*cp -r diretorioOrigem diretorioDestino/* ->  cria uma pasta diretorioOrigem  em diretorioDestino, se existir, e copia todo o conteúdo de diretorioOrigem, incluido a própria pasta, para diretorioDestino.  

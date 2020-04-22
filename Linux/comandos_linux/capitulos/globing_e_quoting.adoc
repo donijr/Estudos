@@ -1,18 +1,18 @@
 == globing e quoting
 
-== ;
+=== ;
 *;* -> ; entre dois comandos faz o shell fazer o comando1 depois o comando2. + 
 ----
 comando1;comando2
 ----
 
-== &&
+=== &&
 *&&* -> (E) entre dois comandos faz o shell executar o comando2 se o comando1 ter exit status = 0.
 ----
 comando1 && comando2
 ----
 
-== || 
+=== || 
 *||* -> (OU) entre dois comandos faz o shell executar o comando2 se o comando1 dar exit status != 0.
 ----
 comando1 || comando2

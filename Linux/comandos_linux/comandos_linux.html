@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.5">
+<title>Comandos Linux Sh</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
+/* Remove comment around @import statement below when using as a custom stylesheet */
+/*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
+audio,canvas,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+[hidden],template{display:none}
+script{display:none!important}
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+a{background:transparent}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+dfn{font-style:italic}
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}
+input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.center{margin-left:auto;margin-right:auto}
+.spread{width:100%}
+p.lead,.paragraph.lead>p,#preamble>.sectionbody>.paragraph:first-of-type p{font-size:1.21875em;line-height:1.6}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0;direction:ltr}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:none}
+p{font-family:inherit;font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #ddddd8;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol,ul.no-bullet,ol.no-bullet{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
+ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
+ul.square{list-style-type:square}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ul.no-bullet{list-style:none}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+abbr,acronym{text-transform:uppercase;font-size:90%;color:rgba(0,0,0,.8);border-bottom:1px dotted #ddd;cursor:help}
+abbr{text-transform:none}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote cite{display:block;font-size:.9375em;color:rgba(0,0,0,.6)}
+blockquote cite:before{content:"\2014 \0020"}
+blockquote cite a,blockquote cite a:visited{color:rgba(0,0,0,.6)}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media only screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
+table thead,table tfoot{background:#f7f8f7;font-weight:bold}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt,table tr:nth-of-type(even){background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.clearfix:before,.clearfix:after,.float-group:before,.float-group:after{content:" ";display:table}
+.clearfix:after,.float-group:after{clear:both}
+*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
+*:not(pre)>code.nobreak{word-wrap:normal}
+*:not(pre)>code.nowrap{white-space:nowrap}
+pre,pre>code{line-height:1.45;color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;text-rendering:optimizeSpeed}
+em em{font-style:normal}
+strong strong{font-weight:400}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menu{color:rgba(0,0,0,.8)}
+b.button:before,b.button:after{position:relative;top:-1px;font-weight:400}
+b.button:before{content:"[";padding:0 3px 0 2px}
+b.button:after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header:before,#header:after,#content:before,#content:after,#footnotes:before,#footnotes:after,#footer:before,#footer:after{content:" ";display:table}
+#header:after,#content:after,#footnotes:after,#footer:after{clear:both}
+#content{margin-top:1.25em}
+#content:before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #ddddd8}
+#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #ddddd8;padding-bottom:8px}
+#header .details{border-bottom:1px solid #ddddd8;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span:before{content:"\00a0\2013\00a0"}
+#header .details br+span.author:before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark:before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber:after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #ddddd8;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #efefed;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media only screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+#toc.toc2{margin-top:0!important;background-color:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #efefed;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #efefed;left:auto;right:0}}
+@media only screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:100%;background-color:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:rgba(255,255,255,.8);line-height:1.44}
+.sect1{padding-bottom:.625em}
+@media only screen and (min-width:768px){.sect1{padding-bottom:1.25em}}
+.sect1+.sect1{border-top:1px solid #efefed}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor:before,h2>a.anchor:before,h3>a.anchor:before,#toctitle>a.anchor:before,.sidebarblock>.content>.title>a.anchor:before,h4>a.anchor:before,h5>a.anchor:before,h6>a.anchor:before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock>caption.title{white-space:nowrap;overflow:visible;max-width:0}
+.paragraph.lead>p,#preamble>.sectionbody>.paragraph:first-of-type p{color:rgba(0,0,0,.85)}
+table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p{font-size:inherit}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #ddddd8;color:rgba(0,0,0,.6)}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
+.exampleblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child{margin-bottom:0}
+.sidebarblock{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+.sidebarblock>:first-child{margin-top:0}
+.sidebarblock>:last-child{margin-bottom:0}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock pre:not(.highlight),.listingblock pre[class="highlight"],.listingblock pre[class^="highlight "],.listingblock pre.CodeRay,.listingblock pre.prettyprint{background:#f7f7f8}
+.sidebarblock .literalblock pre,.sidebarblock .listingblock pre:not(.highlight),.sidebarblock .listingblock pre[class="highlight"],.sidebarblock .listingblock pre[class^="highlight "],.sidebarblock .listingblock pre.CodeRay,.sidebarblock .listingblock pre.prettyprint{background:#f2f1f1}
+.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{-webkit-border-radius:4px;border-radius:4px;word-wrap:break-word;padding:1em;font-size:.8125em}
+.literalblock pre.nowrap,.literalblock pre[class].nowrap,.listingblock pre.nowrap,.listingblock pre[class].nowrap{overflow-x:auto;white-space:pre;word-wrap:normal}
+@media only screen and (min-width:768px){.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{font-size:.90625em}}
+@media only screen and (min-width:1280px){.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{font-size:1em}}
+.literalblock.output pre{color:#f7f7f8;background-color:rgba(0,0,0,.9)}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;-webkit-border-radius:4px;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]:before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:#999}
+.listingblock:hover code[data-lang]:before{display:block}
+.listingblock.terminal pre .command:before{content:attr(data-prompt);padding-right:.5em;color:#999}
+.listingblock.terminal pre .command:not([data-prompt]):before{content:"$"}
+table.pyhltable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.pyhltable td{vertical-align:top;padding-top:0;padding-bottom:0;line-height:1.45}
+table.pyhltable td.code{padding-left:.75em;padding-right:0}
+pre.pygments .lineno,table.pyhltable td:not(.code){color:#999;padding-left:0;padding-right:.5em;border-right:1px solid #ddddd8}
+pre.pygments .lineno{display:inline-block;margin-right:.25em}
+table.pyhltable .linenodiv{background:none!important;padding-right:0!important}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock blockquote p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote:before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.5em;margin-right:.5ex;text-align:right}
+.quoteblock .quoteblock{margin-left:0;margin-right:0;padding:.5em 0;border-left:3px solid rgba(0,0,0,.6)}
+.quoteblock .quoteblock blockquote{padding:0 0 0 .75em}
+.quoteblock .quoteblock blockquote:before{display:none}
+.verseblock{margin:0 1em 1.25em 1em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract{margin:0 0 1.25em 0;display:block}
+.quoteblock.abstract blockquote,.quoteblock.abstract blockquote p{text-align:left;word-spacing:0}
+.quoteblock.abstract blockquote:before,.quoteblock.abstract blockquote p:first-of-type:before{display:none}
+table.tableblock{max-width:100%;border-collapse:separate}
+table.tableblock td>.paragraph:last-child p>p:last-child,table.tableblock th>p:last-child,table.tableblock td>p:last-child{margin-bottom:0}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all th.tableblock,table.grid-all td.tableblock{border-width:0 1px 1px 0}
+table.grid-all tfoot>tr>th.tableblock,table.grid-all tfoot>tr>td.tableblock{border-width:1px 1px 0 0}
+table.grid-cols th.tableblock,table.grid-cols td.tableblock{border-width:0 1px 0 0}
+table.grid-all *>tr>.tableblock:last-child,table.grid-cols *>tr>.tableblock:last-child{border-right-width:0}
+table.grid-rows th.tableblock,table.grid-rows td.tableblock{border-width:0 0 1px 0}
+table.grid-all tbody>tr:last-child>th.tableblock,table.grid-all tbody>tr:last-child>td.tableblock,table.grid-all thead:last-child>tr>th.tableblock,table.grid-rows tbody>tr:last-child>th.tableblock,table.grid-rows tbody>tr:last-child>td.tableblock,table.grid-rows thead:last-child>tr>th.tableblock{border-bottom-width:0}
+table.grid-rows tfoot>tr>th.tableblock,table.grid-rows tfoot>tr>td.tableblock{border-width:1px 0 0 0}
+table.frame-all{border-width:1px}
+table.frame-sides{border-width:0 1px}
+table.frame-topbot{border-width:1px 0}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+td>div.verse{white-space:pre}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.unstyled,ol.unnumbered,ul.checklist,ul.none{list-style-type:none}
+ul.unstyled,ol.unnumbered,ul.checklist{margin-left:.625em}
+ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1em;font-size:.85em}
+ul.checklist li>p:first-child>input[type="checkbox"]:first-child{width:1em;position:relative;top:1px}
+ul.inline{margin:0 auto .625em auto;margin-left:-1.375em;margin-right:0;padding:0;list-style:none;overflow:hidden}
+ul.inline>li{list-style:none;float:left;margin-left:1.375em;display:block}
+ul.inline>li>*{display:block}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist>table tr>td:first-of-type{padding:0 .75em;line-height:1}
+.colist>table tr>td:last-of-type{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
+.imageblock.left,.imageblock[style*="float: left"]{margin:.25em .625em 1.25em 0}
+.imageblock.right,.imageblock[style*="float: right"]{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em 0;border-width:1px 0 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;text-indent:-1.05em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+.gist .file-data>table{border:0;background:#fff;width:100%;margin-bottom:0}
+.gist .file-data>table td.line-data{width:99%}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background-color:#00fafa}
+.black{color:#000}
+.black-background{background-color:#000}
+.blue{color:#0000bf}
+.blue-background{background-color:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background-color:#fa00fa}
+.gray{color:#606060}
+.gray-background{background-color:#7d7d7d}
+.green{color:#006000}
+.green-background{background-color:#007d00}
+.lime{color:#00bf00}
+.lime-background{background-color:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background-color:#7d0000}
+.navy{color:#000060}
+.navy-background{background-color:#00007d}
+.olive{color:#606000}
+.olive-background{background-color:#7d7d00}
+.purple{color:#600060}
+.purple-background{background-color:#7d007d}
+.red{color:#bf0000}
+.red-background{background-color:#fa0000}
+.silver{color:#909090}
+.silver-background{background-color:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background-color:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background-color:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background-color:#fafa00}
+span.icon>.fa{cursor:default}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note:before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip:before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning:before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution:before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important:before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background-color:rgba(0,0,0,.8);-webkit-border-radius:100px;border-radius:100px;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]:after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,span.alt{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background-color:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@media print{@page{margin:1.25cm .75cm}
+*{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare):after,a[href^="https:"]:not(.bare):after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]:after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #ddddd8!important;padding-bottom:0!important}
+.sect1{padding-bottom:0!important}
+.sect1+.sect1{border:0!important}
+#header>h1:first-child{margin-top:1.25rem}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em 0}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span:before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]:before{display:block}
+#footer{background:none!important;padding:0 .9375em}
+#footer-text{color:rgba(0,0,0,.6)!important;font-size:.9em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+</style>
+</head>
+<body class="article toc2 toc-left">
+<div id="header">
+<h1>Comandos Linux Sh</h1>
+<div id="toc" class="toc2">
+<div id="toctitle">Índice</div>
+<ul class="sectlevel1">
+<li><a href="#_globing_e_quoting">globing e quoting</a>
+<ul class="sectlevel2">
+<li><a href="#_">;</a></li>
+<li><a href="#__2">&amp;&amp;</a></li>
+<li><a href="#__3">||</a></li>
+<li><a href="#__4">*</a></li>
+<li><a href="#__5">?</a></li>
+<li><a href="#__0_9">[0-9]</a></li>
+<li><a href="#__a_z_ou_a_z">[a-z] ou [A-Z]</a></li>
+<li><a href="#__6">{&#8230;&#8203;,&#8230;&#8203;}</a></li>
+<li><a href="#__7">\</a></li>
+<li><a href="#__ou">“&#8230;&#8203;” ou ‘&#8230;&#8203;’</a></li>
+</ul>
+</li>
+<li><a href="#_a">A</a>
+<ul class="sectlevel2">
+<li><a href="#_apropos">apropos</a></li>
+<li><a href="#_apt">apt</a></li>
+</ul>
+</li>
+<li><a href="#_b">B</a>
+<ul class="sectlevel2">
+<li><a href="#_builtin">builtin</a></li>
+<li><a href="#_bash">bash</a></li>
+</ul>
+</li>
+<li><a href="#_c">C</a>
+<ul class="sectlevel2">
+<li><a href="#_cat">cat</a></li>
+<li><a href="#_cd">cd</a></li>
+<li><a href="#_cp">cp</a></li>
+<li><a href="#_chmod">chmod</a></li>
+</ul>
+</li>
+<li><a href="#_d">D</a>
+<ul class="sectlevel2">
+<li><a href="#_dpkg">dpkg</a></li>
+</ul>
+</li>
+<li><a href="#_e">E</a>
+<ul class="sectlevel2">
+<li><a href="#_echo">echo</a></li>
+<li><a href="#_env">env</a></li>
+<li><a href="#_exit">exit</a></li>
+<li><a href="#_export">export</a></li>
+</ul>
+</li>
+<li><a href="#_f">F</a>
+<ul class="sectlevel2">
+<li><a href="#_find">find</a>
+<ul class="sectlevel3">
+<li><a href="#_find_e_exec">Find e -exec</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_globing_e_quoting">globing e quoting</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_">;</h3>
+<div class="paragraph">
+<p><strong>;</strong> &#8594; ; entre dois comandos faz o shell fazer o comando1 depois o comando2.<br></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>comando1;comando2</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__2">&amp;&amp;</h3>
+<div class="paragraph">
+<p><strong>&amp;&amp;</strong> &#8594; (E) entre dois comandos faz o shell executar o comando2 se o comando1 ter exit status = 0.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>comando1 &amp;&amp; comando2</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__3">||</h3>
+<div class="paragraph">
+<p><strong>||</strong> &#8594; (OU) entre dois comandos faz o shell executar o comando2 se o comando1 dar exit status != 0.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>comando1 || comando2</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__4">*</h3>
+<div class="paragraph">
+<p><strong>&#42;</strong> &#8594;  antes ou depois de um termo expandirá a busca/seleção para qualquer termo a partir do asteriscos ou antes dele, dependendo da limitação de texto antes ou depois. Exemplos: <br></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>cat *.txt</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>saída: mostraria todo o conteúdo de cada arquivo .txt de uma pasta.</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>cat text*.txt</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>saída: mostraria todo o conteúdo de todos os arquivos que tem o nome com   text(AlgumaCoisa).txt</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__5">?</h3>
+<div class="paragraph">
+<p><strong>?</strong> &#8594; antes ou depois de um termo irá expandir a buscar/selecionar o nº de caracteres correspondentes ao nº de ? digitados.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__0_9">[0-9]</h3>
+<div class="paragraph">
+<p><strong>[123]</strong> &#8594; antes ou depois de um termo irá expandir para buscar/selecionar arquivos onde o espaço que está substituindo sejam os números 1 ou 2 ou 3.</p>
+</div>
+<div class="paragraph">
+<p><strong>[1239]</strong> &#8594; antes ou depois de um termo irá expandir para buscar/selecionar arquivos onde o espaço que está substituindo sejam os números 1 ou 2 ou 3 ou 9.</p>
+</div>
+<div class="paragraph">
+<p><strong>[0-9]</strong> &#8594; antes ou depois de um termo irá expandir para buscar/selecionar arquivos onde o espaço que está substituindo sejam os números 0 ao 9.<br></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+! nega o comando. EX: [!0-9] &#8594; retornaria coisas que não são nºs.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__a_z_ou_a_z">[a-z] ou [A-Z]</h3>
+<div class="paragraph">
+<p><strong>[a-z]</strong> &#8594; antes ou depois de um termo irá expandir para buscar/selecionar arquivos onde o espaço que está substituindo sejam as letras de “a” a “z” minúsculas.
+	OBS: ! nega o comando. EX: [!a-z] -&#8594; retornaria coisas que não são 		letras</p>
+</div>
+<div class="paragraph">
+<p><strong>[A-Z]</strong> &#8594; antes ou depois de um termo irá expandir para buscar/selecionar arquivos onde o espaço que está substituindo sejam as letras de “A” a “Z” maiúsculas.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__6">{&#8230;&#8203;,&#8230;&#8203;}</h3>
+<div class="paragraph">
+<p><strong>comando {primeiro&#42;,segundo?}</strong> &#8594; vai buscar/selecionar resultados correspondentes ao primeio* e/ou ao segundo? ao mesmo tempo.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__7">\</h3>
+<div class="paragraph">
+<p><strong>\qualquerCoisa</strong> &#8594; ao usar o \ antes de qualquer coisa isso indica para o bash que não queremos que essa coisa seja interpretada como normalmente seria.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__ou">“&#8230;&#8203;” ou ‘&#8230;&#8203;’</h3>
+<div class="paragraph">
+<p><strong>echo ‘parametro’</strong> &#8594; ao usa ‘ ou “ no início e final de um parametro indica para o bash que o que está entre ‘ ou “ é um único parametro e não um comando.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_a">A</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_apropos">apropos</h3>
+<div class="paragraph">
+<p><strong>apropos palavraBuscada</strong> &#8594; Busca um comando/manual com determinada palavra-chave.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_apt">apt</h3>
+<div class="paragraph">
+<p><strong>apt-cache search nomePacote</strong> &#8594; buscar pacote</p>
+</div>
+<div class="paragraph">
+<p><strong>sudo apt-get install nomePacote</strong> &#8594; instalar pacote</p>
+</div>
+<div class="paragraph">
+<p><strong>sudo apt-get install --only-upgrade nomePacote</strong> &#8594; atualizar somente o pacote escolhido</p>
+</div>
+<div class="paragraph">
+<p><strong>sudo apt-get -f install nomePacote</strong> &#8594; instala pacote com dependencias, corrige dependencias.</p>
+</div>
+<div class="paragraph">
+<p><strong>sudo apt-get remove nomePacote</strong> &#8594; remover pacote.</p>
+</div>
+<div class="paragraph">
+<p><strong>sudo apt-get update</strong> &#8594; atualizar lista dos repositórios.</p>
+</div>
+<div class="paragraph">
+<p><strong>sudo apt-get upgrade</strong> &#8594; atualizar sistema.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_b">B</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_builtin">builtin</h3>
+<div class="paragraph">
+<p><strong>builtin comando</strong> &#8594;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_bash">bash</h3>
+<div class="paragraph">
+<p><strong>bash</strong> &#8594; abre um bash. Pode abrir um bash dentro de outro bash. Dica: abra um bash dentro de outro bash para fazer testes.</p>
+</div>
+<div class="paragraph">
+<p><strong>bash -c</strong> &#8594;</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_c">C</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_cat">cat</h3>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<div class="title">Objetivo do cat</div>
+<p>O objetivo do cat é servir como concatenador de arquivos.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>cat nomeArquivo</strong> &#8594; exibe conteúdo de nomeArquivo.</p>
+</div>
+<div class="paragraph">
+<p><strong>cat nomeArquivo1 nomeArquivo2</strong> &#8594; exibe e concatena nomeArquivo1 e nomeArquivo2.</p>
+</div>
+<div class="paragraph">
+<p>cat -n nomeArquino &#8594; exibe conteúdo do nomeArquivo e exibe o número de linhas do documento.</p>
+</div>
+<div class="paragraph">
+<p><strong>cat -q nomeArquivo</strong> &#8594; exibe o conteúdo do nomeArquivo sem informações sobre o arquivo. Exibe somente o texto, não exibe o título.</p>
+</div>
+<div class="paragraph">
+<p><strong>cat -n 5 nomeArquivo</strong> -&#8594; exibe o conteúdo das 5 primeiras linhas. Obs: Também pode ser utilado qualquer outro número no lugar do 5.</p>
+</div>
+<div class="paragraph">
+<p><strong>cat /etc/os-release</strong> &#8594; exibe informações sobre a versão do sistema operacional</p>
+</div>
+<div class="paragraph">
+<p><strong>cat /etc/lsb-release</strong> &#8594; exibe informações sobre a versão do sistema operacional debian-like</p>
+</div>
+<div class="paragraph">
+<p><strong>cat /etc/redhat-release</strong> &#8594; exibe informações sobre a versão do sistema operacional redhat-like.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cd">cd</h3>
+<div class="paragraph">
+<p><strong>cd</strong> &#8594; muda do diretório atual para a home do usuário.</p>
+</div>
+<div class="paragraph">
+<p><strong>cd ~/pasta</strong> &#8594; muda do diretório atual para /home/usuario/pasta. É um atalho para usar a /home do usuário.</p>
+</div>
+<div class="paragraph">
+<p><strong>cd .</strong> &#8594; muda para o diretório atual.</p>
+</div>
+<div class="paragraph">
+<p><strong>cd ..</strong> &#8594; muda para o diretório anterior.</p>
+</div>
+<div class="paragraph">
+<p><strong>cd endereco/da/pasta/desejada</strong> &#8594; muda de pasta.</p>
+</div>
+<div class="paragraph">
+<p><strong>cd -</strong> &#8594; muda para a pasta anterior em que o usuário acessou no terminal.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cp">cp</h3>
+<div class="paragraph">
+<p><strong>cp nomeArquivo nomeArquivo(copia)</strong> &#8594; cria uma cópia do nomeArquivo com nome excolhido, no caso seria, de nomeArquivo(copia)</p>
+</div>
+<div class="paragraph">
+<p><strong>cp NomeArquivo diretorio1/subdiretorio1</strong> &#8594; cria uma cópia de nomeArquivo chamado nomeArquivo em subdiretorio1.</p>
+</div>
+<div class="paragraph">
+<p><strong>cp -i nomeArquivo nomeArquivo(copia)</strong> &#8594; antes de copiar arquivos exibe um pergunta para confirmar a operação.</p>
+</div>
+<div class="paragraph">
+<p><strong>cp diretorioOrigem/&#42; diretórioDestino</strong> &#8594; copia todos os arquivos de diretórioOrigem para diretórioDestino. Não copia diretórios.</p>
+</div>
+<div class="paragraph">
+<p><strong>cp -u diretorioOrigem/&#42; bkpDiretórioDestino</strong> &#8594; copia só os arquivos que foram modificados de diretorioOrigem para bkpDiretorioDestino</p>
+</div>
+<div class="paragraph">
+<p><strong>cp -b diretorio1/&#42; diretorio2</strong> &#8594; sobresescreve os arquivos de diretorio1, mas antes cria cópias de backup.</p>
+</div>
+<div class="paragraph">
+<p><strong>cp -r diretorioOrigem diretorioDestino</strong> &#8594; copia diretorio. Copia o conteúdo diretorioOrigem para o diretorioDestino recursivamente.</p>
+</div>
+<div class="paragraph">
+<p><strong>cp -r diretorioOrigem diretorioDestino/</strong> &#8594;  cria uma pasta diretorioOrigem  em diretorioDestino, se existir, e copia todo o conteúdo de diretorioOrigem, incluido a própria pasta, para diretorioDestino.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_chmod">chmod</h3>
+<div class="paragraph">
+<p><strong>chmod+x nomeArquivo</strong> &#8594; permissão de execução para nomeArquivo. Equivalente a <code>chmod 777 nomeArquivo</code>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_d">D</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_dpkg">dpkg</h3>
+<div class="paragraph">
+<p><strong>sudo dpkg -i nomeArquivo.deb</strong> &#8594; instala pacote deb , não instala dependências.</p>
+</div>
+<div class="paragraph">
+<p><strong>sudo dpkg -r nomeArquivo.deb</strong> &#8594; desinstala pacote deb , não desinstala dependências.</p>
+</div>
+<div class="paragraph">
+<p><strong>sudo dpkg -P nomeArquivo.deb</strong> &#8594; remove pacotes deb e arquivos de configurações.</p>
+</div>
+<div class="paragraph">
+<p><strong>dpkg --list</strong> &#8594; lista pacotes que estão ou já estiveram no sistema.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_e">E</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_echo">echo</h3>
+<div class="paragraph">
+<p><strong>echo mensagem</strong> &#8594; Exibe uma mensagem na tela.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_env">env</h3>
+<div class="paragraph">
+<p><strong>env</strong> &#8594; lista todas as variáveis de ambiente.</p>
+</div>
+<div class="paragraph">
+<p><strong>env nomeVariavel1=valorVariavel1 nomeVariavelN=valorVariavelN comando</strong> &#8594; cria um novo ambiente com as variáveis temporárias e executa o comando ou script. Pode-se criar variáveis com nomes diferentes ou até mesmo iguais a variáveis já existentes, pois o escopo desse comando só vale para o novo ambiente criado. Acabou o comando, acabou o ambiente, fim das variáveis e seus valores.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_exit">exit</h3>
+<div class="paragraph">
+<p><strong>exit</strong> &#8594; sair de um shell do usuário. Finaliza o shell.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_export">export</h3>
+<div class="paragraph">
+<p><strong>export nomeVariavel</strong> &#8594; Define atributo de exportação para variáveis shell. Transforma uma variável de shell em de variável de ambiente.</p>
+</div>
+<div class="paragraph">
+<p><strong>export nomeVariavel -n</strong> &#8594; variável deixa de ser de ambiente. Variável ainda existe, mas como variável de shell.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_f">F</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_find">find</h3>
+<div class="paragraph">
+<p><strong>find</strong> &#8594; exibe arquivos que estão localizados a partir do diretório atual.</p>
+</div>
+<div class="paragraph">
+<p><strong>find -print</strong> &#8594; exibe arquivos que estão localizados a partir do diretório atual.</p>
+</div>
+<div class="paragraph">
+<p><strong>find /caminho/absoluto/diretório/aqrquivo</strong> &#8594; exibe arquivos que estão localizados a partir do diretório indicado pelo caminho absoluto.</p>
+</div>
+<div class="paragraph">
+<p><strong>find /caminho -type f</strong> &#8594; procurar e exibe todos os arquivos a partir do diretorio /caminho</p>
+</div>
+<div class="paragraph">
+<p><strong>find -type d</strong> &#8594; procura e exibe todas as pastas a partir do diretório atual.</p>
+</div>
+<div class="paragraph">
+<p><strong>find .</strong> &#8594; exibe arquivos que estão localizados a partir do diretório atual. Utiliza caminho absoluto.</p>
+</div>
+<div class="paragraph">
+<p><strong>find -iname nomeArquivoOuDiretorio</strong> &#8594; procura e depois exibe todos os resultados que contêm nomeArquivoOuDiretorio, a partir da pasta atual. -iname também aceita ? , * e [] , para isso utiliza entre aspas a expressão e suporta arquivos com . (ponto).</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><code>-iname</code> não diferencia maiúsculas e minúsculas.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>find -name nomeArquivoOuDiretorio</strong> &#8594; procura e depois exibe todos os resultados que são exatamente nomeArquivoOuDiretorio, a partir da pasta atual. -name também aceita ? , * e [] , para isso utiliza entre aspas a expressão e suporta arquivos com .(ponto).</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><code>-name</code> diferencia maiúsculas e minúsculas.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>find -name "arquivo&#42;"</strong> &#8594; procura e exibe todos os arquivos ou pastas que commecem com arquivo.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>É obrigatório o uso de " " nesses casos.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>find -type d -name "nomeDiretorio"</strong> &#8594; procura e retorna somente diretórios que contenham o termo nomeDiretorio.</p>
+</div>
+<div class="paragraph">
+<p><strong>find -type f -name "nomeArquivo"</strong> &#8594; procura e retorna somente arquivos que contenham o termo nomeArquivo.</p>
+</div>
+<div class="paragraph">
+<p><strong>find -type l -name "nomeLinkSimbolico"</strong> &#8594; procura e retorna somente links simbólicos que contenham o termo nomeDiretorio.</p>
+</div>
+<div class="paragraph">
+<p><strong>find /caminho -user nomeUsuario</strong> &#8594; procura em /caminho os arquivos e pastas que o usuário nomeUsuario é dono.</p>
+</div>
+<div class="paragraph">
+<p><strong>find /caminho -group nomeGrupo</strong> &#8594; procura em /caminho os arquivos e pastas que o grupo nomeGrupo é dono.</p>
+</div>
+<div class="paragraph">
+<p><strong>find -size +10k</strong> -&#8594; procura e retorna arquivos maiores que 10kb.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="title">Opções extras:</div>
+<div class="paragraph">
+<p>-00[k|M|G], arquivos menores que 00 kb ou Mb ou Gb.<br>
++00[k|M|G], arquivos maiores que 00 kb ou Mb ou Gb.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>find -atime -7</strong> &#8594; procura arquivos que foram acessados no período dos últimos 7 dias.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><code>find -atime n</code>, onde n =  nº de dias do período que deseja procurar.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>find -mtime -7</strong> &#8594; procura arquivos que foram modificados no período dos últimos 7 dias.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><code>find -mtime n</code>, onde n = nº de dias do período que deseja procurar.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>find -ctime -7</strong> &#8594; procura arquivos que foram modificados, mudadas as permissões dos arquivos, incluindo grupos, arquivos mudou de diretório,  no período dos últimos 7 dias.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><code>find -ctime n</code>, onde n = nº de dias do período que deseja procurar.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>find -inum 4474556</strong> &#8594; procura arquivos que tem o inode especificado.</p>
+</div>
+<div class="paragraph">
+<p><strong>find -name "*condicao1” find -name “*condicao2"</strong> &#8594; procura arquivos que satisfaçam as duas condições de busca. Isso equivale ao um E : <code>find -name “*condicao1” find -a -name “*condicao2”</code>.</p>
+</div>
+<div class="paragraph">
+<p><strong>find -name "*condicao1" -o find -name "*condicao2"</strong> &#8594; procura arquivos que satisfaçam a condição 1 OU a condição 2.</p>
+</div>
+<div class="paragraph">
+<p><strong>find \( -name "*condicao1" -o find -name "*condicao2" \) -a -name "*condicao3"</strong> &#8594; procura arquivos que satisfaçam a (condição 1 OU a condição 2) E depois a condição 3.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="title">Precedência</div>
+<div class="paragraph">
+<p>Ao usar mais de um OU(-o) ou/e E(-a) juntos na mesma expressão utilizar parenteses para ter certeza da precendência do E/OU.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="title">Escape dos ( )</div>
+<div class="paragraph">
+<p>Quando usar () utilizar a \ antes, então fica assim: \(\) .</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>find -name "*condicao1&#42;" ! -name “&#42;condicao2&#42;”</strong> &#8594; procura arquivos que satisfazem a sentença inteira, ou seja, retorna arquivos onde a condicao1 é verdadeira e a condicao2 é falsa. ! é equivalente ao NÃO (negação), ele inverte o valor lógico da sentença.</p>
+</div>
+<div class="sect3">
+<h4 id="_find_e_exec">Find e -exec</h4>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+<div class="title">-exec</div>
+<div class="paragraph">
+<p><code>-exec</code> &#8594; indica que após ele virá um conjunto de instruções para se executar em todos os arquivos resultantes do find.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+tomar cuidado ao utilizar, pois pode ser usado até o rm como comando no final da busca e todos os arquivo que resultarem da busca do find serão excluídos.
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>find -name "&#42;condicao1&#42;" -exec ls -l "{}" \;</strong> &#8594; para cada saída do find  será apresentado como ls -l.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="title">Uso do {}</div>
+<div class="paragraph">
+<p>{} indica que para cada caminho que o find encontrar será executado o que está depois de -exec.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="title">Uso do " " e \</div>
+<div class="paragraph">
+<p>“” e \ indica escape do bash, pois {} e ; são caracteres especiais do bash.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>find -name "&#42;condicao1&#42;" -exec echo "{}" foi encontrado ";"</strong> &#8594; exibe “foi encontrado” logo após cada saída do find.</p>
+</div>
+<div class="paragraph">
+<p><strong>find name "&#42;condicao1&#42;" -exec rm -i "{}" \;</strong> &#8594; remove interativamente cada arquivo que o find encontrar que satisfazem a condicao1.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2020-04-22 00:58:01 -03
+</div>
+</div>
+</body>
+</html>

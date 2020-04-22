@@ -1,0 +1,118 @@
+=== find
+
+*find* -> exibe arquivos que estão localizados a partir do diretório atual.
+
+*find -print* -> exibe arquivos que estão localizados a partir do diretório atual.
+
+*find /caminho/absoluto/diretório/aqrquivo* -> exibe arquivos que estão localizados a partir do diretório indicado pelo caminho absoluto.
+
+*find /caminho -type f* -> procurar e exibe todos os arquivos a partir do diretorio /caminho
+
+*find -type d* -> procura e exibe todas as pastas a partir do diretório atual.
+
+*find .* -> exibe arquivos que estão localizados a partir do diretório atual. Utiliza caminho absoluto.
+
+*find -iname nomeArquivoOuDiretorio* -> procura e depois exibe todos os resultados que contêm nomeArquivoOuDiretorio, a partir da pasta atual. -iname também aceita ? , * e [] , para isso utiliza entre aspas a expressão e suporta arquivos com . (ponto). 
+[TIP]
+====
+`-iname` não diferencia maiúsculas e minúsculas.
+====
+
+*find -name nomeArquivoOuDiretorio* -> procura e depois exibe todos os resultados que são exatamente nomeArquivoOuDiretorio, a partir da pasta atual. -name também aceita ? , * e [] , para isso utiliza entre aspas a expressão e suporta arquivos com .(ponto).
+[TIP]
+====
+`-name` diferencia maiúsculas e minúsculas.
+====
+
+//&#42; É * EM UNICODE
+*find -name "arquivo&#42;"* -> procura e exibe todos os arquivos ou pastas que commecem com arquivo. 
+[TIP]
+====
+É obrigatório o uso de " " nesses casos.
+====
+
+
+*find -type d -name "nomeDiretorio"* -> procura e retorna somente diretórios que contenham o termo nomeDiretorio.
+
+*find -type f -name "nomeArquivo"* -> procura e retorna somente arquivos que contenham o termo nomeArquivo.
+
+*find -type l -name "nomeLinkSimbolico"* -> procura e retorna somente links simbólicos que contenham o termo nomeDiretorio.
+
+*find /caminho -user nomeUsuario* -> procura em /caminho os arquivos e pastas que o usuário nomeUsuario é dono.
+
+*find /caminho -group nomeGrupo* -> procura em /caminho os arquivos e pastas que o grupo nomeGrupo é dono.
+
+*find -size +10k* --> procura e retorna arquivos maiores que 10kb.
+[TIP]
+.Opções extras:
+====
+-00[k|M|G], arquivos menores que 00 kb ou Mb ou Gb. +
++00[k|M|G], arquivos maiores que 00 kb ou Mb ou Gb.
+====
+
+*find -atime -7* -> procura arquivos que foram acessados no período dos últimos 7 dias. 
+[TIP]
+====
+`find -atime n`, onde n =  nº de dias do período que deseja procurar.
+====
+
+*find -mtime -7* -> procura arquivos que foram modificados no período dos últimos 7 dias. 
+[TIP]
+====
+`find -mtime n`, onde n = nº de dias do período que deseja procurar.
+====
+
+*find -ctime -7* -> procura arquivos que foram modificados, mudadas as permissões dos arquivos, incluindo grupos, arquivos mudou de diretório,  no período dos últimos 7 dias. 
+[TIP]
+====
+`find -ctime n`, onde n = nº de dias do período que deseja procurar.
+====
+
+*find -inum 4474556* -> procura arquivos que tem o inode especificado.
+
+*find -name "*condicao1” find -name “*condicao2"* -> procura arquivos que satisfaçam as duas condições de busca. Isso equivale ao um E : `find -name “*condicao1” find -a -name “*condicao2”`.
+
+*find -name "*condicao1" -o find -name "*condicao2"* -> procura arquivos que satisfaçam a condição 1 OU a condição 2.
+
+*find \( -name "*condicao1" -o find -name "*condicao2" \) -a -name "*condicao3"* -> procura arquivos que satisfaçam a (condição 1 OU a condição 2) E depois a condição 3. 
+[TIP]
+.Precedência
+====
+Ao usar mais de um OU(-o) ou/e E(-a) juntos na mesma expressão utilizar parenteses para ter certeza da precendência do E/OU. 
+====
+[TIP]
+.Escape dos ( )
+====
+Quando usar () utilizar a \ antes, então fica assim: \(\) .
+====
+
+//&#42; É * EM UNICODE
+*find -name "*condicao1&#42;" ! -name “&#42;condicao2&#42;”* -> procura arquivos que satisfazem a sentença inteira, ou seja, retorna arquivos onde a condicao1 é verdadeira e a condicao2 é falsa. ! é equivalente ao NÃO (negação), ele inverte o valor lógico da sentença.
+
+==== Find e -exec
+[IMPORTANT]
+.-exec
+====
+`-exec` -> indica que após ele virá um conjunto de instruções para se executar em todos os arquivos resultantes do find. 
+
+WARNING: tomar cuidado ao utilizar, pois pode ser usado até o rm como comando no final da busca e todos os arquivo que resultarem da busca do find serão excluídos.
+====
+
+//&#42; É * EM UNICODE
+*find -name "&#42;condicao1&#42;" -exec ls -l "{}" \;* -> para cada saída do find  será apresentado como ls -l.
+[NOTE]
+.Uso do {}
+====
+{} indica que para cada caminho que o find encontrar será executado o que está depois de -exec.
+====
+[NOTE]
+.Uso do " " e \
+====
+“” e \ indica escape do bash, pois {} e ; são caracteres especiais do bash. 
+====
+
+//&#42; É * EM UNICODE
+*find -name "&#42;condicao1&#42;" -exec echo "{}" foi encontrado ";"* -> exibe “foi encontrado” logo após cada saída do find.
+
+//&#42; É * EM UNICODE
+*find name "&#42;condicao1&#42;" -exec rm -i "{}" \;* -> remove interativamente cada arquivo que o find encontrar que satisfazem a condicao1.

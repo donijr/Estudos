@@ -1,0 +1,3 @@
+=== echo
+
+*echo mensagem* -> Exibe uma mensagem na tela.

@@ -1,0 +1,3 @@
+=== chmod
+
+*chmod+x nomeArquivo* -> permissão de execução para nomeArquivo. Equivalente a `chmod 777 nomeArquivo`.

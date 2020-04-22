@@ -1,0 +1,13 @@
+=== cd
+
+*cd* -> muda do diretório atual para a home do usuário.
+
+*cd ~/pasta* -> muda do diretório atual para /home/usuario/pasta. É um atalho para usar a /home do usuário.
+
+*cd .* -> muda para o diretório atual.
+
+*cd ..* -> muda para o diretório anterior.
+
+*cd endereco/da/pasta/desejada* -> muda de pasta.
+
+*cd -* -> muda para a pasta anterior em que o usuário acessou no terminal.

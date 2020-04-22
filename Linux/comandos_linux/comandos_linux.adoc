@@ -1,9 +1,9 @@
 = Comandos Linux Sh
 :toc:
-:toclevels: 2
+:toclevels: 3
 :toc-title: Índice
 
-:capitulosdir: capitulos
+:capitulosdir: ./capitulos
 
 //include::capitulosdir/ponto_e_virgula.adoc[]
 
@@ -19,24 +19,24 @@
 
 //include::capitulosdir/numerais_gq.adoc[]
 
-include::capitulosdir/globing_e_quoting.adoc[]
+include::{capitulosdir}/globing_e_quoting.adoc[]
 
 == A
 
-include::capitulosdir/apropos.adoc[]
+include::{capitulosdir}/apropos.adoc[]
 
-include::capitulosdir/apt.adoc[]
+include::{capitulosdir}/apt.adoc[]
 
 == B
 
-include::capitulosdir/builtin.adoc[]
+include::{capitulosdir}/builtin.adoc[]
 
-include::capitulosdir/bash.adoc[]
+include::{capitulosdir}/bash.adoc[]
 
 == C
 
-include::capitulosdir/cat.adoc[]
+include::{capitulosdir}/cat.adoc[]
 
-include::capitulosdir/cd.adoc[]
+include::{capitulosdir}/cd.adoc[]
 
-include::capitulosdir/cp.adoc[]
+include::{capitulosdir}/cp.adoc[]

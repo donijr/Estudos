@@ -1,72 +1,42 @@
-= Comandos Linux
-Donizeti Gonçalves Manço Júnior <donizetigmjr@gmail.com>
-v0.1, 2020-04-14
+= Comandos Linux Sh
 :toc:
 :toclevels: 2
 :toc-title: Índice
 
+:capitulosdir: capitulos
 
-== ;
-*;* -> ; entre dois comandos faz o shell fazer o comando1 depois o comando2. + 
-----
-comando1;comando2
-----
+//include::capitulosdir/ponto_e_virgula.adoc[]
 
-    
-== &&
-*&&* -> (E) entre dois comandos faz o shell executar o comando2 se o comando1 ter exit status = 0. +
----
-comando1 && comando2
----
+//include::capitulosdir/e_logico.adoc[]
 
-== || 
-*||* -> (OU) entre dois comandos faz o shell executar o comando2 se o comando1 dar exit status != 0.
-----
-comando1 || comando2
-----
+//include::capitulosdir/ou_logico.adoc[]
 
-== globing e quoting
-=== *
-//&#42; É * EM UNICODE 
+//== globing e quoting
 
-*&#42;* ->  antes ou depois de um termo expandirá a busca/seleção para qualquer termo a partir do asteriscos ou antes dele, dependendo da limitação de texto antes ou depois. Exemplo:  + 
-----
-cat *.txt
----- 
-----
-saída: mostraria todo o conteúdo de cada arquivo .txt de uma pasta.
-----
-----
-cat text*.txt
-saída: mostraria todo o conteúdo de todos os arquivos que tem o nome com   text(AlgumaCoisa).txt
-----  
+//include::capitulosdir/asterisco.adoc[]
 
-=== ?
-*?* -> antes ou depois de um termo irá expandir a buscar/selecionar o nº de caracteres correspondentes ao nº de ? digitados.
+//include::capitulosdir/ponto_interrogacao.adoc[]
 
-=== [0-9]
+//include::capitulosdir/numerais_gq.adoc[]
 
-*[123]* -> antes ou depois de um termo irá expandir para buscar/selecionar arquivos onde o espaço que está substituindo sejam os números 1 ou 2 ou 3.
+include::capitulosdir/globing_e_quoting.adoc[]
 
-*[1239]* -> antes ou depois de um termo irá expandir para buscar/selecionar arquivos onde o espaço que está substituindo sejam os números 1 ou 2 ou 3 ou 9.
+== A
 
-*[0-9]* -> antes ou depois de um termo irá expandir para buscar/selecionar arquivos onde o espaço que está substituindo sejam os números 0 ao 9. +
+include::capitulosdir/apropos.adoc[]
 
-NOTE: ! nega o comando. EX: [!0-9] -> retornaria coisas que não são nºs.
+include::capitulosdir/apt.adoc[]
 
-=== [a-z] ou [A-Z]
-*[a-z]* -> antes ou depois de um termo irá expandir para buscar/selecionar arquivos onde o espaço que está substituindo sejam as letras de “a” a “z” minúsculas.
-	OBS: ! nega o comando. EX: [!a-z] --> retornaria coisas que não são 		letras
+== B
 
-*[A-Z]* -> antes ou depois de um termo irá expandir para buscar/selecionar arquivos onde o espaço que está substituindo sejam as letras de “A” a “Z” maiúsculas.
-	
-=== {...,...}
-//&#42; É * EM UNICODE
-*comando {primeiro&#42;,segundo?}* -> vai buscar/selecionar resultados correspondentes ao primeio* e/ou ao segundo? ao mesmo tempo.
+include::capitulosdir/builtin.adoc[]
 
-=== \
+include::capitulosdir/bash.adoc[]
 
-*\qualquerCoisa* -> ao usar o \ antes de qualquer coisa isso indica para o bash que não queremos que essa coisa seja interpretada como normalmente seria.
+== C
 
-=== “...” ou ‘...’
-*echo ‘parametro’* -> ao usa ‘ ou “ no início e final de um parametro indica para o bash que o que está entre ‘ ou “ é um único parametro e não um comando. 
+include::capitulosdir/cat.adoc[]
+
+include::capitulosdir/cd.adoc[]
+
+include::capitulosdir/cp.adoc[]

@@ -509,7 +509,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_i">I</a></li>
 <li><a href="#_j">J</a></li>
 <li><a href="#_k">K</a></li>
-<li><a href="#_l">L</a></li>
+<li><a href="#_l">L</a>
+<ul class="sectlevel2">
+<li><a href="#_less">less</a>
+<ul class="sectlevel3">
+<li><a href="#_atalhos_e_comandos_dentro_do_less">Atalhos e Comandos dentro do less</a></li>
+<li><a href="#_dicas_de_sequência_de_comandos">Dicas de Sequência de Comandos</a></li>
+</ul>
+</li>
+<li><a href="#_login">login</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -1193,13 +1203,230 @@ tomar cuidado ao utilizar, pois pode ser usado até o rm como comando no final d
 <div class="sect1">
 <h2 id="_l">L</h2>
 <div class="sectionbody">
-
+<div class="sect2">
+<h3 id="_less">less</h3>
+<div class="paragraph">
+<p><strong>less nomeArquivo</strong> -&#8594; mostra conteúdo do arquivo</p>
+</div>
+<div class="sect3">
+<h4 id="_atalhos_e_comandos_dentro_do_less">Atalhos e Comandos dentro do less</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Comando/Atalho</th>
+<th class="tableblock halign-left valign-top">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><kbd>&#8593;</kbd></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">navega para linha de cima</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><kbd>&#8595;</kbd></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">navega para linha de baixo.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><kbd>E</kbd> ou <kbd>J</kbd></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">navega uma linha por vez pra baixo.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><kbd>Y</kbd> ou <kbd>K</kbd></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">navega um linha por vez pra cima.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><kbd>Espaço</kbd> ou <kbd>F</kbd></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">navega por páginas. Próxima página.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><kbd>B</kbd></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">navega por páginas. Página anterior.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><kbd>Home</kbd> ou <kbd>B</kbd></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">retorna para início do documento.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><kbd>End</kbd> ou <span class="keyseq"><kbd>Shift</kbd>+<kbd>G</kbd></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vai para o fim do documento.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="keyseq"><kbd>P</kbd>+<kbd>0-100</kbd></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>P</kbd> depois número inteiro entre 0 e 100 pula para a porcentagem correspondente.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><kbd>H</kbd></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ajuda.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><kbd>!</kbd>comando</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">com <kbd>!</kbd> logo em seguida digitar um comando do terminal, podemos usar comandos do shell dentro do less.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><kbd>V</kbd></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">abre o editor padrão do sistema na linha atual.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="keyseq"><kbd>-</kbd>+<kbd>I</kbd></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ignora todos os cases nas buscas</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="keyseq"><kbd>Ctrl</kbd>+<kbd>L</kbd></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">redesenha a tela.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><kbd>R</kbd></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">edesenha a tela.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="keyseq"><kbd>:</kbd>+<kbd>N</kbd></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">próximo arquivo.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="keyseq"><kbd>:</kbd>+<kbd>p</kbd></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">arquivo anterior.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><kbd>Q</kbd></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sair.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><kbd>?</kbd></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pesquisa reversa (começa pesquisa do final). Comandos de navegação são os mesmos que os da <kbd>/</kbd>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><kbd>/</kbd></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Atalhos de Navegação da Pesquisa</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Atalho</th>
+<th class="tableblock halign-left valign-top">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>N</kbd></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Próxima incidência</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>Shift</kbd>+<kbd>N</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Incidência anterior</p></td>
+</tr>
+</tbody>
+</table></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pesquisar</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="keyseq"><kbd>M</kbd>+<kbd>letra</kbd></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Marcar posição</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="keyseq"><kbd>'</kbd>+<kbd>letraMarcada</kbd></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vai para posição marcada pela letraMarcada</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><kbd>''</kbd></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Volta na posição anterior marcada com <span class="keyseq"><kbd>'</kbd>+<kbd>letraMarcada</kbd></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="keyseq"><kbd>&amp;</kbd>+<kbd>/</kbd></span><br></p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<span class="keyseq"><kbd>&amp;</kbd>+<kbd>Enter</kbd></span> : Desativa filtros.
+</td>
+</tr>
+</table>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pesquisar (só retorna as linhas onde encontrou a palavra).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_dicas_de_sequência_de_comandos">Dicas de Sequência de Comandos</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>-I &amp;</strong> : dica está incompleta.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_login">login</h3>
+<div class="paragraph">
+<p><strong>login</strong> &#8594; Começa uma nova sessão no sistema, abre um novo shell. Será pedido nome do usuário e senha.</p>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-05-03 00:35:42 -0300
+Last updated 2020-05-03 17:02:04 -0300
 </div>
 </div>
 </body>

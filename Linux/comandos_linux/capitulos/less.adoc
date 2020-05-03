@@ -1,0 +1,125 @@
+:experimental:
+:upkey: &#8593;
+:downkey: &#8595;
+
+=== less
+*less nomeArquivo* --> mostra conteúdo do arquivo
+[table]
+
+==== Atalhos e Comandos dentro do less
+
+[cols="1a,2"]
+|===
+|Comando/Atalho | Propósito
+
+|kbd:[{upkey}]
+|navega para linha de cima
+
+|kbd:[{downkey}]
+|navega para linha de baixo.
+
+|kbd:[E] ou kbd:[J]
+|navega uma linha por vez pra baixo.
+
+|kbd:[Y] ou kbd:[K]
+|navega um linha por vez pra cima.
+
+|kbd:[Espaço] ou kbd:[F]
+|navega por páginas. Próxima página.
+
+|kbd:[B]
+|navega por páginas. Página anterior.
+
+|kbd:[Home] ou kbd:[B]
+|retorna para início do documento.
+
+|kbd:[End] ou kbd:[Shift + G]
+|vai para o fim do documento.
+
+|kbd:[P + 0-100]
+|kbd:[P] depois número inteiro entre 0 e 100 pula para a porcentagem correspondente.
+
+|kbd:[H] 
+|ajuda.	
+
+|kbd:[!]comando
+|com kbd:[!] logo em seguida digitar um comando do terminal, podemos usar comandos do shell dentro do less.
+
+|kbd:[V]
+|abre o editor padrão do sistema na linha atual.
+
+|kbd:[- + I]
+|ignora todos os cases nas buscas
+
+|kbd:[Ctrl + L]
+|redesenha a tela.
+
+|kbd:[R]
+|edesenha a tela.
+
+|kbd:[: + N]
+|próximo arquivo.
+
+|kbd:[: + p]
+|arquivo anterior.
+
+|kbd:[Q]
+|sair.
+
+|kbd:[?]
+|pesquisa reversa (começa pesquisa do final). Comandos de navegação são os mesmos que os da kbd:[/].
+
+|kbd:[/]
+
+.Atalhos de Navegação da Pesquisa 
+!===
+!Atalho ! Propósito
+
+!kbd:[N] 
+!Próxima incidência
+
+!kbd:[Shift + N]
+!Incidência anterior
+
+!===
+|pesquisar
+
+|kbd:[M + letra]
+|Marcar posição
+
+|kbd:[' + letraMarcada]
+|vai para posição marcada pela letraMarcada
+
+|kbd:['']
+|Volta na posição anterior marcada com kbd:[' + letraMarcada]
+
+|kbd:[& + /] +
+
+TIP: kbd:[& + Enter] : Desativa filtros.
+
+|Pesquisar (só retorna as linhas onde encontrou a palavra).
+
+|===
+
+==== Dicas de Sequência de Comandos
+
+* *-I &* : dica está incompleta.
+
+
+////
+		/ --> pesquisar
+			n --> próxima incidência
+			N --> incidência anterior
+			m + letra --> marcar posição
+			' + letraMarcada --> vai para posição marcada pela letraMarcada
+			'' -->volta na posição anterior
+		&/ -->  pesquisar (só retorna as linhas onde encontrou a palavra).
+			&+Enter --> desativa filtros 
+[TIP]
+.Como sair do less
+===
+aperte q para sair.
+===
+		Sequência de comandos
+		-I &
+////

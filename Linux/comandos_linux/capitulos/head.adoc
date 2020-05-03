@@ -1,0 +1,5 @@
+=== head
+
+*head nomeArquivo* -> exibe primeiras linhas do arquivo. 
+
+*head -n 5 nomeArquivo1 nomeArquivo2* -> exibe as 5 primeiras linhas do nomeArquivo1 e do nomeArquivo2.

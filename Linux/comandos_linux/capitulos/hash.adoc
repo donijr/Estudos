@@ -1,0 +1,7 @@
+=== hash
+
+*hash* -> exibe lista de comandos de programas/binários “cacheados” na memória.
+
+*hash -r* -> esquece local de todos os programas já “cacheados”
+
+*hash -d nomeComando nomeComando2* -> esquece local já “cacheado” do nomeComando e nomeComando2.

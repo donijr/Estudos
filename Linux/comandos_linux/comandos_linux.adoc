@@ -3,8 +3,11 @@
 :toclevels: 3
 :toc: left
 :toc-title: Índice
+:experimental: 
 
 :capitulosdir: ./capitulos
+:upkey: &#8593;
+:downkey: &#8595;
 
 //include::capitulosdir/ponto_e_virgula.adoc[]
 
@@ -12,7 +15,7 @@
 
 //include::capitulosdir/ou_logico.adoc[]
 
-//== globing e quoting
+== Globing e Quoting
 
 //include::capitulosdir/asterisco.adoc[]
 
@@ -35,7 +38,6 @@ include::{capitulosdir}/builtin.adoc[]
 include::{capitulosdir}/bash.adoc[]
 
 == C
-
 include::{capitulosdir}/cat.adoc[]
 
 include::{capitulosdir}/cd.adoc[]
@@ -62,7 +64,26 @@ include::{capitulosdir}/export.adoc[]
 
 include::{capitulosdir}/find.adoc[]
 
+== G
+
+== H
+
+include::{capitulosdir}/hash.adoc[]
+
+include::{capitulosdir}/head.adoc[]
+
+include::{capitulosdir}/history.adoc[]
 
 
 
+//incluir seção $HISTFILE
 
+== I
+
+== J
+
+== K
+
+== L
+
+include::{capitulosdir}/less.adoc[]

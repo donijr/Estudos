@@ -1,0 +1,5 @@
+=== history
+
+*history* -> lista o histórico dos comandos no terminal.
+
+*history #Nº* -> list os últimos Nº comandos no terminal.

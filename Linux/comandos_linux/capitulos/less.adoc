@@ -1,6 +1,6 @@
-:experimental:
-:upkey: &#8593;
-:downkey: &#8595;
+//:experimental:
+//:upkey: &#8593;
+//:downkey: &#8595;
 
 === less
 *less nomeArquivo* --> mostra conteúdo do arquivo
@@ -104,22 +104,3 @@ TIP: kbd:[& + Enter] : Desativa filtros.
 ==== Dicas de Sequência de Comandos
 
 * *-I &* : dica está incompleta.
-
-
-////
-		/ --> pesquisar
-			n --> próxima incidência
-			N --> incidência anterior
-			m + letra --> marcar posição
-			' + letraMarcada --> vai para posição marcada pela letraMarcada
-			'' -->volta na posição anterior
-		&/ -->  pesquisar (só retorna as linhas onde encontrou a palavra).
-			&+Enter --> desativa filtros 
-[TIP]
-.Como sair do less
-===
-aperte q para sair.
-===
-		Sequência de comandos
-		-I &
-////

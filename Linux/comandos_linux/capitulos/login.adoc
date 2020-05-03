@@ -1,0 +1,3 @@
+=== login
+
+*login* -> Começa uma nova sessão no sistema, abre um novo shell. Será pedido nome do usuário e senha.

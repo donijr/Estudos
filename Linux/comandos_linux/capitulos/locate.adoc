@@ -1,0 +1,24 @@
+=== locate
+
+*locate nomeArquivo* -> pesquisar o nomeArquivo em todas as pastas do sistema (também pesquisa pastas).
+
+[NOTE]
+====
+.Locate em cada distro
+Cada distro tem o seu locate, umas instalam por padrão outras não, se quiser utilizar deve procurar no google “install locate 	nomeDistro”, pois em cada distro ele pode estar em um pacote 	diferente.
+====
+
+[NOTE]
+====
+.Local de armazenamento
+O locate armazena o local de cada arquivo em um banco de dados, que não é atualizado a cada exclusão/inclusão de arquivos. 	Então se quiser fazer uma pesquisa atualizada uitlizar: 
+----	
+sudo updatedb
+locate nomeArquivo
+----
+====
+*locate -e* -> pesquisar o nomeArquivo em todas as pastas do sistema, menos arquivos excluídos. O banco ainda não é atualizado.
+
+//&#42; É * EM UNICODE
+*locate '&#42;/nomeArquivo&#42;'* --> pesquisar todos arquivos que contenham /nomeArquivo* antes, depois, ou no meio do nome do arquivo.
+	Obs3: o locate aceita o globing, mas tomar cuidado que os arquivos não começam com nomeArquivos e sim com /nomeArquivos.

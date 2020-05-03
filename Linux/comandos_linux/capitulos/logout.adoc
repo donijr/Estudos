@@ -1,0 +1,10 @@
+//:experimental:
+=== logout
+
+*logout* -> finaliza a sessão do usuário, incluindo todos os shells abertos na sessão. Conselhável utilizar o exit. 
+
+[TIP]
+.Atalho
+====
+Pode-se usar também a combinação de teclas kbd:[Ctrl + D], mas não é sempre que vai estar configurada.
+====

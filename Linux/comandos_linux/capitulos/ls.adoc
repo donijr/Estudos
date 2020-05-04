@@ -1,0 +1,86 @@
+=== ls
+
+*ls* -> Exibe os arquivos do diretório em uma lista com colunas.
+
+*ls --color* -> Saida da listagem das pastas fica colorida.
+
+*ls --color=auto* ->  exibe os arquivos do diretório em uma lista com colunas com cores:
+[cols="2"]
+.Siginificado das cores (Não é um padrão)
+|===
+|Cor |Siginificado
+
+|Branco 
+|Arquivos
+
+|Azul
+|Pastas
+
+|Azul-claro
+|link
+
+|Verde
+|Executável
+
+|Vermelho
+|Pacotes
+
+|===
+
+*ls ** -> Exibe todas, menos arquivos ocultos, as pasta e um nível de subpasta de cada pasta do diretório atual.
+
+*ls .** -> Exibe todos arquivos ocultos e as pasta ocultas e um nível de subpasta de cada pasta do diretório atual.
+
+*ls -a* -> lista pasta e arquivos, incluindo `.` , `..` e ocultas.
+
+*ls -F* -> lista arquivos e pastas com identificadores visuais (para monitores de uma cor) ao final do nome do arquivo:
+
+[cols="2"]
+.Significado dos Caracteres
+|===
+|Caracter | Siginificado
+
+|Sem caracter 
+|Arquivo normal
+
+|/
+|Diretório
+
+|*
+|Executável
+
+|@
+|Link
+
+|===
+
+*ls -p* -> Lista somente pasta com o identificador visual / no final do nome. Outros tipos de arquivos não tem caracteres de identificação visual.
+
+*ls –color=never* -> Não exibe cor na listagem de pasta e arquivos.
+
+*ls – r* -> inverter a ordem de exibição dos arquivos. Será de z-a no lugar de a-z.
+
+*ls --sort=size* -> Exibe os arquivos do diretório em uma lista ordenada pelo tamanho, do maior para o menor.
+
+//Colocar un link para referencia
+*ls -S* -> ver `ls --sort=size`.
+
+*ls --sort=time*-> exibe os arquivos do diretório em uma lista ordenada pelo tempo de criação do arquivo, do mais recente para o mais antigo.
+
+//Colocar un link para referencia
+*ls -t* -> ver `ls --sort=time`
+
+*ls --sort=extension* -> exibe os arquivos do diretório em uma lista ordenada pelo tipo de extensão do arquivo., do que tem extensão para o que não tem em ordem alfabética.
+
+*ls -X* -> ver `ls --sort=extension`.
+
+*ls --format=long* -> exibe os arquivos do diretório em uma lista de uma única coluna com bastante detalhes sobre os arquivos.
+
+//Colocar un link para referencia
+*ls -l* -> mesma função do `ls –format=long`.
+
+*ls -R* -> `ls` recursivo. Exibe o conteúdo dos diretórios recursivamente. O `ls` vai listar todas as pastas mães e filhas.
+
+*ls -ld nomeDiretório* -> exibe informações completas somente do nomeDiretório.
+
+*ls -d* -> exibe lista somente dos diretórios.

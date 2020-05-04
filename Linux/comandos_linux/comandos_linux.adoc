@@ -89,3 +89,7 @@ include::{capitulosdir}/history.adoc[]
 include::{capitulosdir}/less.adoc[]
 
 include::{capitulosdir}/login.adoc[]
+
+include::{capitulosdir}/logout.adoc[]
+
+include::{capitulosdir}/ls.adoc[]

@@ -1,0 +1,52 @@
+:experimental:
+//:upkey: &#8593;
+//:downkey: &#8595;
+
+=== more
+
+*more nomeArquivo* -> mostra conteúdo do arquivo.
+
+==== Atalhos e Comandos dentro do more
+
+[cols="1a,2"]
+|===
+|Comando/Atalho | Propósito
+
+|kbd:[Enter]
+|Navega linha por linha
+
+|kbd:[Espaço]
+|navega por páginas. Próxima página.
+
+|kbd:[B]
+|navega por páginas. Página anterior.
+
+|kbd:[H] 
+|ajuda.	
+
+|kbd:[!]comando
+|com kbd:[!] logo em seguida digitar um comando do terminal, podemos usar comandos do shell dentro do more.
+
+|kbd:[Q]
+|sair.
+
+|kbd:[/]
+
+.Atalhos de Navegação da Pesquisa 
+!===
+!Atalho ! Propósito
+
+!kbd:[N] 
+!Próxima incidência
+
+!===
+|pesquisar
+
+|kbd:[V]
+|abre editor vi na linha atual do arquivo
+
+|===
+
+==== Dicas de Sequência de Comandos
+
+* *-I &* : dica está incompleta.

@@ -1,0 +1,5 @@
+=== rm
+
+*rm nomeArquivo* -> remove/exclui nomeArquivo
+
+*rm -fr nomePasta* -> exclui pasta e subpastas  recursivamente e forçadamente sem pergutar.

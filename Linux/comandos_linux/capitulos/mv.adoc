@@ -1,0 +1,9 @@
+=== mv
+
+*mv Nomearquivo	diretorio/Destino* -> move arquivo ou pasta para diretorio/Destino. 
+
+*mv nomeArquivo novoNomeArquivo* -> renomeia nomeArquivo (ou pasta) para novoNomeArquivo. Funciona se novoNomeArquivo não existir, se novoNomeArquivo existir irá sobreescrever o novoNomeArquivo.
+
+*mv -vi Nomearquivo	diretorio/Destino* -> forma mais segura de renomear um arquivo ou pasta. Irá perguntar se caso sobreescreva o arquivo.
+
+*mv -n nomeArquivo novoNomeArquivo* -> forma segura de renomear arquivo ou pasta. Se arquivo ou pasta existir não sobreescreve.

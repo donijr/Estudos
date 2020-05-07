@@ -1,0 +1,5 @@
+== touch
+
+*touch nomeArquivo* -> cria um arquivo vazio. Touch em um arquivo existente atualiza a data de última modificação e acesso do arquivo.
+
+*touch nomeDiretorio* -> Touch em um diretório já existente atualiza a data de última modificação e acesso da pasta.

@@ -1,0 +1,9 @@
+=== rmdir
+
+*rmdir nomeDiretorio* -> apaga pasta nomeDiretorio, somente se ela estiver vazia.
+
+*rmdir diretorio1/subdiretorio/nomeDiretorio* -> apaga somente pasta 	nomeDiretorio, se estiver vazia.
+
+*rmdir -p diretorio1/subdiretorio1/subdiretorio2/nomeDiretorio* -> força o apagamento das que estão vazias.
+
+*rmdir -v diretorio1* -> remove diretorio1 e exibe uma mensagem relatando a remoção de diretorio1

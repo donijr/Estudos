@@ -74,8 +74,6 @@ include::{capitulosdir}/head.adoc[]
 
 include::{capitulosdir}/history.adoc[]
 
-
-
 //incluir seção $HISTFILE
 
 == I
@@ -93,3 +91,33 @@ include::{capitulosdir}/login.adoc[]
 include::{capitulosdir}/logout.adoc[]
 
 include::{capitulosdir}/ls.adoc[]
+
+== M
+
+include::{capitulosdir}/mkdir.adoc[]
+
+include::{capitulosdir}/more.adoc[]
+
+include::{capitulosdir}/mv.adoc[]
+
+== N
+
+== o
+
+== Q
+
+== R
+
+include::{capitulosdir}/rm.adoc[]
+
+include::{capitulosdir}/rmdir.adoc[]
+
+== S
+
+include::{capitulosdir}/set.adoc[]
+
+== T
+
+include::{capitulodir}/tail.adoc[]
+
+include::{capitulosdir}/touch.adoc[]

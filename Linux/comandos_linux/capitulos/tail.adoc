@@ -1,0 +1,9 @@
+=== tail
+
+*tail nomeArquivo* -> imprime as 10 últimas linhas de um arquivo.
+
+*tail n +30 nomeArquivo* -> imprime a partir da linha 30 do nomeArquivo. o número de linhas para mostrar pode variar.
+
+*tail n 30 nomeArquivo* -> imprime as últimas 30 linhas do nomeArquivo. o número de linhas para mostrar pode variar.
+
+*tail -f nomeArquivo* -> lê sempre as últimas movimentações do arquivo.

@@ -1,0 +1,45 @@
+
+
+=== mkdir
+
+*mkdir nomeDiretorio* -> criar um um diretório na pasta atual
+
+*mkdir diretorio1/subdiretorio/nomeDiretorio* -> cria diretorio  na 	pasta direto1/subdiretorio
+
+*mkdir -p diretorio1/subdiretorio1/subdiretorio2* -> força a criação de pasta, mesmo se ,por exemplo, subdiretorio1 e subdiretorio2 não existirem.
+
+*mkdir nomeDiretotio -v* -> criar uma pasta e no final exibe uma mensagem que a pasta foi criada.
+
+*mkdir -p diretorio1/subdiretorio{1,2,3}/pastaAno200{1,2,3,4}* -> exemplo de criação de diretórios onde cria da seguite maneira:
+[plantuml, format=svg, opts="inline"]
+----
+skinparam Legend {
+	FontSize 17
+}
+legend
+diretorio1
+|_ subdiretorio1
+  |_ pastaAno2001
+  |_ pastaAno2002
+  |_ pastaAno2003
+  |_ pastaAno2004
+|_ subdiretorio2
+  |_ pastaAno2001
+  |_ pastaAno2002
+  |_ pastaAno2003
+  |_ pastaAno2004
+|_ subdiretorio3
+  |_ pastaAno2001
+  |_ pastaAno2002
+  |_ pastaAno2003
+  |_ pastaAno2004
+end legend
+----
+
+
+
+
+
+
+
+

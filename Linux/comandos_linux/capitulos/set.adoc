@@ -1,0 +1,5 @@
+=== set
+
+*set -o emacs* -> configura atalhos do terminal para atalhos de emacs, já é o padrão. 
+
+*set -o vi* -> configura atalhos do terminal para atalhos de emacs
